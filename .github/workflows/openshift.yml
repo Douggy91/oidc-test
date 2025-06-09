@@ -76,15 +76,15 @@ jobs:
       with:
         oc: 'latest'
 
-      - name: Log in to OpenShift with Username/Password
-        uses: redhat-actions/oc-login@v1
-        with:
-          openshift_server_url: ${{ env.OPENSHIFT_SERVER }}
-          # openshift_token: ${{ env.OPENSHIFT_TOKEN }}
-          username: ${{ secrets.OPENSHIFT_USERNAME }} 
-          password: ${{ secrets.OPENSHIFT_PASSWORD }} 
-          insecure_skip_tls_verify: true
-          namespace: ${{ env.OPENSHIFT_NAMESPACE }}
+    - name: Log in to OpenShift with Username/Password
+      uses: redhat-actions/oc-login@v1
+      with:
+        openshift_server_url: ${{ env.OPENSHIFT_SERVER }}
+        # openshift_token: ${{ env.OPENSHIFT_TOKEN }}
+        username: ${{ secrets.OPENSHIFT_USERNAME }} 
+        password: ${{ secrets.OPENSHIFT_PASSWORD }} 
+        insecure_skip_tls_verify: true
+        namespace: ${{ env.OPENSHIFT_NAMESPACE }}
 
     # Run a script to create a new app or update the current one with the previously pushed container image
     - run: | 
