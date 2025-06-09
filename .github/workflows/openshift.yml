@@ -81,8 +81,8 @@ jobs:
       with:
         openshift_server_url: ${{ env.OPENSHIFT_SERVER }}
         # openshift_token: ${{ env.OPENSHIFT_TOKEN }}
-        username: ${{ secrets.OPENSHIFT_USERNAME }} 
-        password: ${{ secrets.OPENSHIFT_PASSWORD }} 
+        openshift_username: ${{ secrets.OPENSHIFT_USERNAME }} 
+        openshift_password: ${{ secrets.OPENSHIFT_PASSWORD }} 
         insecure_skip_tls_verify: true
         namespace: ${{ env.OPENSHIFT_NAMESPACE }}
 
