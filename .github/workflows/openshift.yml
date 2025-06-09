@@ -67,6 +67,8 @@ jobs:
         # 'tee -a'는 파일의 끝에 내용을 추가합니다.
         echo "${IP_ADDRESS_API} ${HOSTNAME_API}" | sudo tee -a /etc/hosts > /dev/null
         echo "${IP_ADDRESS_OAUTH} ${HOSTNAME_OAUTH}" | sudo tee -a /etc/hosts > /dev/null
+        
+        chmod +x ./github/script.sh
 
 
     - name: Install OpenShift CLI
