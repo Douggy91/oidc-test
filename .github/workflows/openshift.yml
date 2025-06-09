@@ -68,7 +68,7 @@ jobs:
         echo "${IP_ADDRESS_API} ${HOSTNAME_API}" | sudo tee -a /etc/hosts > /dev/null
         echo "${IP_ADDRESS_OAUTH} ${HOSTNAME_OAUTH}" | sudo tee -a /etc/hosts > /dev/null
         
-        chmod +x ./github/script.sh
+        chmod +x ./.github/script.sh
 
 
     - name: Install OpenShift CLI
