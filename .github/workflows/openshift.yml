@@ -3,7 +3,7 @@ name: OpenShift
 env: 
   IMAGE_REGISTRY: ocpktpoc.azurecr.io/test-github-action
   REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
-  REGISTRY_PASSWORD: ${{ github.REGISTRY_PASSWORD }}
+  REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
   APP_NAME: test-github-action
   IMAGE_TAGS: latest ${{ github.sha }}
 
